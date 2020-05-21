@@ -10,7 +10,7 @@ const secret = 'YnSPFsd22xQbf3bJ6_v1A4jl'
 const redirectUrl = 'http%3A%2F%2Flocalhost%3A8002%2Fgoogle-callback'
 
 //code for test
-module.exports = app.listen(8002);
+module.exports = app.listen(3000);
 
 
 //profiel pagina. 
@@ -100,7 +100,7 @@ app.get("/google-callback", (req, res, next) => {
             //store the token in a cookie
             accesstoken = JSON.parse(body).access_token;
             res.cookie('auth', accesstoken, { maxAge: 60000 });
-            res.redirect("http://localhost:8002/", )
+            res.redirect("http://localhost:3000/", )
         }
         else
             res.writable("An error occured with googleapis")
