@@ -10,7 +10,7 @@ const secret = 'YnSPFsd22xQbf3bJ6_v1A4jl'
 const redirectUrl = 'http%3A%2F%2Flocalhost%3A8002%2Fgoogle-callback'
 
 //code for test
-module.exports = server
+module.exports = app.listen(8002);
 
 
 //profiel pagina. 
