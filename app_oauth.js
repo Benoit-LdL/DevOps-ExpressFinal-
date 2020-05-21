@@ -11,7 +11,8 @@ const redirectUrl = 'http%3A%2F%2Flocalhost%3A8002%2Fgoogle-callback'
 
 //profiel pagina. 
 //Er wordt eerst de naam en foto in geplaatst vooraleer deze wordt teruggestuurd naar de browser
-const profile = `<!DOCTYPE html>
+const profile = 
+`<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
