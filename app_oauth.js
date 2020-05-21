@@ -35,6 +35,7 @@ app.use(cookie());
 
 //get root of the website
 app.get('/', (req, res, next) => {
+    res.send("hello world");
     var cookie = req.cookies.auth;
     //if no cookie, then redirect to Login page
     if (!cookie) {
