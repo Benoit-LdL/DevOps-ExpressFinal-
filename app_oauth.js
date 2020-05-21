@@ -33,7 +33,7 @@ const profile =
 
 app.use(cookie());
 
-//get root of the website
+//test for ci
 app.get('/test', (req, res, next) => {
     res.send("hello world");
 })
