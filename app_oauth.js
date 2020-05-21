@@ -9,6 +9,10 @@ const clientID = '609373984330-onab060bp61jj60piq66h7sg1icicf4t.apps.googleuserc
 const secret = 'YnSPFsd22xQbf3bJ6_v1A4jl'
 const redirectUrl = 'http%3A%2F%2Flocalhost%3A8002%2Fgoogle-callback'
 
+//code for test
+module.exports = server
+
+
 //profiel pagina. 
 //Er wordt eerst de naam en foto in geplaatst vooraleer deze wordt teruggestuurd naar de browser
 const profile = 
