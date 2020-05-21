@@ -17,7 +17,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh './scripts/test' 
-                sh './scripts/kill.sh' 
+                sh './scripts/kill' 
             }
         }
     }
