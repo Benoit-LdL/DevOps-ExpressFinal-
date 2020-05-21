@@ -100,7 +100,7 @@ app.get("/google-callback", (req, res, next) => {
             //store the token in a cookie
             accesstoken = JSON.parse(body).access_token;
             res.cookie('auth', accesstoken, { maxAge: 60000 });
-            res.redirect("http://localhost:3000/", )
+            res.redirect("http://localhost:3000/")
         }
         else
             res.writable("An error occured with googleapis")
