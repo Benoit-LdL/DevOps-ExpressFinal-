@@ -34,8 +34,12 @@ const profile =
 app.use(cookie());
 
 //get root of the website
-app.get('/', (req, res, next) => {
+app.get('/test', (req, res, next) => {
     res.send("hello world");
+})
+
+//get root of the website
+app.get('/', (req, res, next) => {
     var cookie = req.cookies.auth;
     //if no cookie, then redirect to Login page
     if (!cookie) {
