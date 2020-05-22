@@ -39,7 +39,7 @@ app.use(cookie());
 
 //test for ci
 app.get('/test', (req, res, next) => {
-    res.send("hello world");
+    res.send("This is the Test Environment Branch");
 })
 
 //get root of the website
