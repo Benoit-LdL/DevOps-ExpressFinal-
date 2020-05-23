@@ -19,5 +19,9 @@ pipeline {
                 sh './scripts/test' 
             }
         }
+        stage('Deploy') { 
+            ansiblePlaybook(
+                playbook: '/home/Test-PlayBook.yml'
+            )    
+        }
     }
-}
