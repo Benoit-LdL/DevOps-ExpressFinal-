@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                     ansiblePlaybook(
-                        playbook: '/home/Test-PlayBook.yml'
+                        
                         ) 
             }
         }  
