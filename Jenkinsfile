@@ -21,8 +21,8 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                ansiblePlaybook('/home/Test-PlayBook.yml'){
-                    
+                ansiblePlaybook(
+                    playbook: '/home/Test-PlayBook.yml')
                 }
             }  
         }
