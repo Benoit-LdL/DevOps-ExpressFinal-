@@ -23,8 +23,7 @@ pipeline {
             steps {
                 ansiblePlaybook(
                     playbook: '/home/Test-PlayBook.yml')
-                }
-            }  
-        }
+            }
+        }  
     }
 }
