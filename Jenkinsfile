@@ -22,7 +22,9 @@ pipeline {
         stage('Deploy') { 
             steps {
                 ansiblePlaybook(
-                    playbook: "/Test-PlayBook.yml"
+                    playbook: '/home/Test-PlayBook.yml',
+                    sudo: true,
+                    sudoUser: 'jenkins'
                 ) 
             }
         }  
