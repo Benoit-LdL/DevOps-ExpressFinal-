@@ -22,6 +22,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 node{
+                    label: 'ee'
                     ansiblePlaybook(
                         playbook: '/home/Test-PlayBook.yml'
                         )
