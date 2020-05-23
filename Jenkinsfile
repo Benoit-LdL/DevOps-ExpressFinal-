@@ -10,7 +10,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            steps {
+        steps {
                 sh 'npm install'
             }
         }
@@ -19,5 +19,10 @@ pipeline {
                 sh './scripts/test' 
             }
         }
+        stage('Deploy') {
+            steps {
+                input message: 'Please manally execute the ansible -Production- playbook and check on localhost:3002 if it works'
+            }
+        }  
     }
 }
