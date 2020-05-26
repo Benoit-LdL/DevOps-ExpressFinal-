@@ -29,7 +29,7 @@ pipeline {
                     //sudo: true,
                     //sudoUser: 'jenkins'
                 //sh 'ansible-playbook /home/Test-PlayBook.yml'
-                input message: 'Please run the playbook manually and check if the project is up and running on localhost:3001-3002. When finished, click proceed'
+                input message: 'Please run the playbook manually and check if the project is up and running on localhost:3002. When finished, click proceed'
                 //sh 'pm2 start app-oauth.js --name oAuth chdir=/home/Repo'
                 //sh 'ls'
             }
