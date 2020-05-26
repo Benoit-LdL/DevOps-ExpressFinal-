@@ -7,7 +7,7 @@ var app = ex();
 
 const clientID = '609373984330-onab060bp61jj60piq66h7sg1icicf4t.apps.googleusercontent.com'
 const secret = 'YnSPFsd22xQbf3bJ6_v1A4jl'
-const redirectUrl = 'http%3A%2F%2Flocalhost%3A3000%2Fgoogle-callback'
+const redirectUrl = 'http%3A%2F%2Flocalhost%3A3001%2Fgoogle-callback'
 
 //code for test
 module.exports = app.listen(3000);
@@ -100,7 +100,7 @@ app.get("/google-callback", (req, res, next) => {
             //store the token in a cookie
             accesstoken = JSON.parse(body).access_token;
             res.cookie('auth', accesstoken, { maxAge: 60000 });
-            res.redirect("http://localhost:3000/")
+            res.redirect("http://localhost:3001/")
         }
         else
             res.writable("An error occured with googleapis")
