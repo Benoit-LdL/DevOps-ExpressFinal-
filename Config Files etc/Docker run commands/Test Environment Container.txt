@@ -1,0 +1,8 @@
+sudo docker container run --name Test \
+-it \
+-d \
+--network jenkins \
+--ip 172.18.0.5 \
+-p 3002:3000 \
+--volume /home/benoit/DevOps/Ansible/Test:/home \
+ubuntu:latest

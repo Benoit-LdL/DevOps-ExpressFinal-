@@ -1,0 +1,8 @@
+sudo docker container run --name Production \
+-it \
+-d \
+--network jenkins \
+--ip 172.18.0.6 \
+-p 3001:3000 \
+--volume /home/benoit/DevOps/Ansible/Production:/home \
+ubuntu:latest
