@@ -1,0 +1,46 @@
+---
+ - hosts: Test
+   become: yes
+   tasks:
+   - name: Install GIT & NPM & NODEJS
+ 	apt:
+  	pkg:
+  	- git
+  	- npm
+  	- nodejs
+
+   - name: Update apt repo and cache
+ 	apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+   - name: Upgrade all packages on servers
+ 	apt: upgrade=dist force_apt_get=yes
+
+   - name: Remove old Repo directory
+ 	file:
+  	path: /home/Repo
+  	state: absent
+
+   - name: Clone Test Environment Repository
+ 	git:
+  	repo: https://github.com/Benoit-LdL/DevOps-ExpressFinal-.git
+  	dest: /home/Repo
+  	version: test
+
+   - name: Install "pm2" to run Node.js apps
+ 	npm:
+  	name: pm2
+  	global: yes
+  	state: present
+  	production: yes
+
+   - name: Install NPM in Repo directory
+ 	npm:
+  	path: /home/Repo
+  	state: latest
+
+   - name: Stop Node.js app if running
+ 	command: pm2 stop oAuth chdir=/home/Repo
+ 	ignore_errors: yes
+
+   - name: Start Node.js app
+ 	command: pm2 start app_oauth.js --name oAuth chdir=/home/Repo
